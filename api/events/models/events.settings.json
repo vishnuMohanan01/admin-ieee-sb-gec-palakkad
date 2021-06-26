@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "connection": "acgam",
+  "collectionName": "events",
+  "info": {
+    "name": "events",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "eventName": {
+      "type": "string"
+    },
+    "addedBy": {
+      "type": "string"
+    },
+    "eventStartDate": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "updatedAt": {
+      "type": "date"
+    }
+  }
+}

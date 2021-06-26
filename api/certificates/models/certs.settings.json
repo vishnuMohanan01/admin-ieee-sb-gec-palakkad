@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "connection": "acgam",
+  "collectionName": "certs",
+  "info": {
+    "name": "certificates",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "eventId": {
+      "type": "string"
+    },
+    "recipientEmail": {
+      "type": "string"
+    },
+    "recipientName": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "updatedAt": {
+      "type": "date"
+    }
+  }
+}
