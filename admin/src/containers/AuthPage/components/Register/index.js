@@ -107,26 +107,6 @@ const Register = ({
                 validations={{ required: true }}
                 value={get(modifiedData, `${inputsPrefix}confirmPassword`, '')}
               />
-              <Flex alignItems="flex-start">
-                <Checkbox
-                  name={`${inputsPrefix}news`}
-                  onChange={onChange}
-                  value={get(modifiedData, `${inputsPrefix}news`, false)}
-                />
-                <Padded left size="sm" />
-                <CustomLabel
-                  id="Auth.form.register.news.label"
-                  values={{ terms, policy }}
-                  onClick={() => {
-                    onChange({
-                      target: {
-                        name: `${inputsPrefix}news`,
-                        value: !get(modifiedData, `${inputsPrefix}news`, false),
-                      },
-                    });
-                  }}
-                />
-              </Flex>
               <Padded top size="md">
                 <Button type="submit" color="primary" textTransform="uppercase">
                   {formatMessage({ id: 'Auth.form.button.register' })}

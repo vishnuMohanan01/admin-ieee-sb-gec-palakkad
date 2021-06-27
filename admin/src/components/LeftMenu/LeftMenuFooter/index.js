@@ -16,21 +16,21 @@ function LeftMenuFooter({ version }) {
   return (
     <Wrapper>
       <div className="poweredBy">
-        <A key="website" href="https://strapi.io" target="_blank" rel="noopener noreferrer">
-          Strapi
+        <A key="website" href="https://ieeesbgecpkd.org" target="_blank" rel="noopener noreferrer">
+          ©
         </A>
         &nbsp;
         <A
-          href={`https://github.com/strapi/strapi/releases/tag/v${version}`}
+          href={`https://ieeesbgecpkd.org`}
           key="github"
           target="_blank"
           rel="noopener noreferrer"
         >
-          v{version}
+          2021
         </A>
         &nbsp;
-        <A href="https://strapi.io" target="_blank" rel="noopener noreferrer">
-          — {projectType} Edition
+        <A href="https://ieeesbgecpkd.org" target="_blank" rel="noopener noreferrer">
+          IEEE SB GEC Palakkad.
         </A>
       </div>
     </Wrapper>

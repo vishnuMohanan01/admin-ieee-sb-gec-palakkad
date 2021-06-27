@@ -125,7 +125,9 @@ const HomePage = ({ history: { push } }) => {
               </FormattedMessage>
               {hasAlreadyCreatedContentTypes ? (
                 <FormattedMessage id="app.components.HomePage.welcomeBlock.content.again">
-                  {msg => <P>{msg}</P>}
+                  {msg => {
+                    return (<P>Welcome Back! We hope you're here for a purpose. Don't mess around in the admin. Remember! With great power comes great responsibility.</P>);
+                  }}
                 </FormattedMessage>
               ) : (
                 <FormattedMessage id="HomePage.welcome.congrats">
@@ -136,9 +138,10 @@ const HomePage = ({ history: { push } }) => {
                           return (
                             <FormattedMessage id="HomePage.welcome.congrats.content.bold">
                               {boldContent => {
+                                console.log(boldContent);
                                 return (
                                   <P>
-                                    <b>{congrats}</b>&nbsp;
+                                    <b>{"Congrats! You've made it to the admin."}</b>&nbsp;
                                     {content}&nbsp;
                                     <b>{boldContent}</b>
                                   </P>
@@ -152,82 +155,6 @@ const HomePage = ({ history: { push } }) => {
                   }}
                 </FormattedMessage>
               )}
-              {hasAlreadyCreatedContentTypes && (
-                <div style={{ marginTop: isLoading ? 60 : 50 }}>
-                  {posts.map((post, index) => (
-                    <BlogPost
-                      {...post}
-                      key={post.link}
-                      isFirst={index === 0}
-                      isLoading={isLoading}
-                      error={error}
-                    />
-                  ))}
-                </div>
-              )}
-              <FormattedMessage id={linkProps.id}>
-                {msg => (
-                  <ALink
-                    rel="noopener noreferrer"
-                    {...linkProps}
-                    style={{ verticalAlign: ' bottom', marginBottom: 5 }}
-                  >
-                    {msg}
-                  </ALink>
-                )}
-              </FormattedMessage>
-              <Separator style={{ marginTop: 37, marginBottom: 36 }} />
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                {FIRST_BLOCK_LINKS.map((data, index) => {
-                  const type = index === 0 ? 'doc' : 'code';
-
-                  return (
-                    <LinkWrapper href={data.link} target="_blank" key={data.link} type={type}>
-                      <FormattedMessage id={data.titleId}>
-                        {title => <p className="bold">{title}</p>}
-                      </FormattedMessage>
-                      <FormattedMessage id={data.contentId}>
-                        {content => <p>{content}</p>}
-                      </FormattedMessage>
-                    </LinkWrapper>
-                  );
-                })}
-              </div>
-            </Block>
-          </div>
-
-          <div className="col-md-12 col-lg-4">
-            <Block style={{ paddingRight: 30, paddingBottom: 0 }}>
-              <FormattedMessage id="HomePage.community">{msg => <h2>{msg}</h2>}</FormattedMessage>
-              <FormattedMessage id="app.components.HomePage.community.content">
-                {content => <P style={{ marginTop: 7, marginBottom: 0 }}>{content}</P>}
-              </FormattedMessage>
-              <FormattedMessage id="HomePage.roadmap">
-                {msg => (
-                  <ALink
-                    rel="noopener noreferrer"
-                    href="https://portal.productboard.com/strapi/1-public-roadmap/tabs/2-under-consideration"
-                    target="_blank"
-                  >
-                    {msg}
-                  </ALink>
-                )}
-              </FormattedMessage>
-
-              <Separator style={{ marginTop: 18 }} />
-              <div
-                className="row social-wrapper"
-                style={{
-                  display: 'flex',
-                  margin: 0,
-                  marginTop: 36,
-                  marginLeft: -15,
-                }}
-              >
-                {SOCIAL_LINKS.map((value, key) => (
-                  <SocialLink key={key} {...value} />
-                ))}
-              </div>
             </Block>
           </div>
         </div>

@@ -213,19 +213,7 @@ const AuthPage = ({ hasAdmin, setHasAdmin }) => {
       auth.setToken(token, false);
       auth.setUserInfo(user, false);
 
-      if (
-        (authType === 'register' && modifiedData.userInfo.news === true) ||
-        (authType === 'register-admin' && modifiedData.news === true)
-      ) {
-        axios({
-          method: 'POST',
-          url: 'https://analytics.strapi.io/register',
-          data: {
-            email: user.email,
-            username: user.firstname,
-          },
-        });
-      }
+
       // Redirect to the homePage
       setHasAdmin(true);
       push('/');
