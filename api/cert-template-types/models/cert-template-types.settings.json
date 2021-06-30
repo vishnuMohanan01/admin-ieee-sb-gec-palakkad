@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cert_template_types",
+  "info": {
+    "name": "certTemplates",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "templateName": {
+      "type": "string"
+    }
+  }
+}

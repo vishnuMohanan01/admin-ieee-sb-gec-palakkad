@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cert-template-types",
+      "handler": "cert-template-types.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cert-template-types/count",
+      "handler": "cert-template-types.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cert-template-types/:id",
+      "handler": "cert-template-types.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cert-template-types",
+      "handler": "cert-template-types.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cert-template-types/:id",
+      "handler": "cert-template-types.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cert-template-types/:id",
+      "handler": "cert-template-types.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

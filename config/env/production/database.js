@@ -39,6 +39,7 @@ module.exports = ({ env }) => ({
       },
       options: {
         ssl: false,
+        autoMigration: true
       },
     }
   },
